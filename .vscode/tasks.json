@@ -7,8 +7,24 @@
             "command": "./build.sh",
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             }
+        },
+        {
+            "label": "Run under strace",
+            "type": "shell",
+            "command": "strace",
+            "args": ["${workspaceFolder}/main"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "dependsOn": "Build"
         }
     ]
 }
